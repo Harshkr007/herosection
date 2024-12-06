@@ -1,0 +1,308 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Amenti', sans-serif; /* Ensure the 'Amenti' font is loaded */
+  }
+  
+  /* Navbar Styles */
+  header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem 2rem;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Logo Section */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .logo-text {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  /* Navigation and Search Section */
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #008c8c;
+  }
+  
+  /* Search Button with Circular Edges */
+  .btn-search {
+    background-color: #008c8c;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-search:hover {
+    background-color: #006666;
+  }
+  
+  /* Responsive Design for Small Screens */
+  @media (max-width: 768px) {
+    .container {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  
+    .logo {
+      justify-content: center;
+    }
+  
+    .nav-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links {
+      justify-content: center;
+    }
+  }
+  
+  /* Hero Section Container */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  /* Carousel Container */
+  .carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Individual Slides */
+  .carousel-slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Slide Content Layout */
+  .slide-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Left Section (Description) */
+  .hero-description {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .hero-description h1 {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .hero-description p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #008c8c;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #006666;
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: #008c8c;
+    border: 1px solid #008c8c;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #008c8c;
+    color: white;
+  }
+  
+  /* Right Section (Image) */
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero-image img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add some shadow */
+  }
+  
+  /* Carousel Buttons (Prev/Next) */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 50%;
+    z-index: 10;
+    transition: background-color 0.3s;
+  }
+  
+  .carousel-btn.prev {
+    left: 1rem;
+  }
+  
+  .carousel-btn.next {
+    right: 1rem;
+  }
+  
+  .carousel-btn:hover {
+    background-color: #444;
+  }
+  
+  /* What We Offer Section */
+  .what-we-offer {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: hsl(180, 98%, 33%);
+  }
+  
+  /* Section Heading */
+  .offer-heading h2 {
+    font-size: 2rem;
+    color: #f9f9f9;
+    padding: 0.5rem;
+  }
+  
+  .offer-heading p {
+    font-size: 1.2rem;
+    color: #f9f9f9;
+    margin-bottom: 2rem; /* Added margin for better separation */
+  }
+  
+  /* Offer Cards Container */
+  .offer-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 0.5rem;
+  }
+  
+  /* Individual Card */
+  .offer-card {
+    background-color: hsl(180, 98%, 33%);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .offer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Icon in Cards */
+  .offer-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  /* Card Title */
+  .offer-card h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Hover Effect on Card */
+  .offer-card:hover h3 {
+    color: #008c8c;
+  }
+  
